@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Expenses chart component</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- BALANCE BOX -->
+        <div id="balance">
+            <div id="balance-content">
+                <span>My balance</span>
+                <h2>$ 921.48</h2>
+            </div>
+            <div id="balance-icon">
+                <img src="./images/logo.svg" alt="Logo">
+            </div>
+        </div>
+        <!-- CHARTS BOX -->
+        <div id="charts">
+            <div id="charts-title">
+                <h2>Spending - Last 7 days</h2>
+            </div>
+            <div id="charts-content">
+                <!-- @@@ -->
+                <div class="level-container">
+                    <div class="level" id="mon-level" onmouseenter="showPrice('mon');" onmouseout="hidePrice('mon')">
+                        <span id="mon-value" class="value-popup"></span>
+                    </div>
+                    <span>mon</span>
+                </div>
+                <!-- @@@ -->
+                <div class="level-container">
+                    <div class="level" id="tue-level" onmouseenter="showPrice('tue');" onmouseout="hidePrice('tue')">
+                        <span id="tue-value" class="value-popup"></span>
+                    </div>
+                    <span>tue</span>
+                </div>
+                <!-- @@@ -->
+                <div class="level-container">
+                    <div class="level" id="wed-level" onmouseenter="showPrice('wed');" onmouseout="hidePrice('wed')">
+                        <div id="wed-value" class="value-popup"></div>
+                    </div>
+                    <span>wed</span>
+                </div>
+                <!-- @@@ -->
+                <div class="level-container">
+                    <div class="level" id="thu-level" onmouseenter="showPrice('thu');" onmouseout="hidePrice('thu')">
+                        <div id="thu-value" class="value-popup"></div>
+                    </div>
+                    <span>thu</span>
+                </div>
+                <!-- @@@ -->
+                <div class="level-container">
+                    <div class="level" id="fri-level" onmouseenter="showPrice('fri');" onmouseout="hidePrice('fri')">
+                        <div id="fri-value" class="value-popup"></div>
+                    </div>
+                    <span>fri</span>
+                </div>
+                <!-- @@@ -->
+                <div class="level-container">
+                    <div class="level" id="sat-level" onmouseenter="showPrice('sat');" onmouseout="hidePrice('sat')">
+                        <div id="sat-value" class="value-popup"></div>
+                    </div>
+                    <span>sat</span>
+                </div>
+                <!-- @@@ -->
+                <div class="level-container">
+                    <div class="level" id="sun-level" onmouseenter="showPrice('sun');" onmouseout="hidePrice('sun')">
+                        <div id="sun-value" class="value-popup"></div>
+                    </div>
+                    <span>sun</span>
+                </div>
+            </div>
+            <hr />
+            <div id="spending-resume">
+                <div>
+                    <span>Total this month</span>
+                    <h2>$ 478.33</h2>
+                </div>
+                <div>
+                    <h4>+ 2.4%</h4>
+                    <span>from last month</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ###### -->
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Ronei Feix</a>.
+    </div>
+
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

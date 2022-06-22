@@ -1,3 +1,6 @@
 # FrontEndMentor_Challenges
 
-Este diretório utilizarei para arquivar as soluções desenvolvidas po mim para os desafios FrontEnd disponibilizados no site FRONTEND MENTOR [ https://www.frontendmentor.io/challenges/ ]
+Este diretório utilizarei para arquivar as soluções desenvolvidas por mim para os desafios de código FrontEnd disponibilizados no site FRONTEND MENTOR [ https://www.frontendmentor.io/challenges/ ].
+
+## Expenses Chart Component
+

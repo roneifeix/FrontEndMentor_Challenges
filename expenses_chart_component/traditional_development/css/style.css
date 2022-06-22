@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+:root {
+    --softRed: hsl(10, 79%, 65%);
+    --cyan: hsl(186, 34%, 60%);
+    --darkBrown: hsl(25, 47%, 15%);
+    --mediumBrown: hsl(28, 10%, 53%);
+    --cream: hsl(27, 66%, 92%);
+    --paleOrange: hsl(33, 100%, 98%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cream);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.container {
+    width: 94%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#balance {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--softRed);
+    border-radius: .75rem;
+    color: var(--paleOrange);
+    padding: .5rem;
+    margin-top: 2rem;
+}
+
+#balance-content,
+#balance-icon {
+    padding: 1rem;
+}
+
+#balance-content h2 {
+    padding-top: .5rem;
+}
+
+#charts {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--paleOrange);
+    border-radius: .75rem;
+    color: var(--darkBrown);
+    padding: .5rem;
+    margin-top: 1.5rem;
+
+}
+
+#charts-title {
+    width: 100%;
+    padding-left: .5rem;
+}
+
+#charts-content {
+    width: 98%;
+    color: var(--mediumBrown);
+    font-size: .9rem;
+    text-align: center;
+    padding-top: 1.5rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.level-container {
+    padding-top: 1rem;
+}
+
+.level {
+    width: 2rem;
+    height: 10px;
+    background-color: var(--cyan);
+    border-radius: .25rem;
+    z-index: 0;
+    position: relative;
+}
+
+.level:hover {
+    cursor: pointer;
+    opacity: .75;
+}
+
+/* The actual popup (appears on top) */
+.value-popup {
+    white-space: nowrap;
+    visibility: hidden;
+    background-color: var(--darkBrown);
+    color: var(--paleOrange);
+    font-size: .8rem;
+    text-align: center;
+    border-radius: 6px;
+    padding: 3px 5px;
+    z-index: 9;
+    position: absolute;
+    top: -2rem;
+    left: -30%;
+}
+
+/* Popup arrow */
+.value-popup::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--darkBrown) transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.show {
+    visibility: visible;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* ###### */
+hr {
+    width: 95%;
+    margin: 1rem 0;
+    opacity: .5;
+}
+
+#spending-resume {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--darkBrown);
+    margin-bottom: 1rem;
+}
+
+#spending-resume span {
+    color: var(--mediumBrown);
+    line-height: 2rem;
+}
+
+#spending-resume h4 {
+    text-align: right;
+}
+
+#spending-resume:first-child {
+    align-items: flex-start;
+}
+
+#spending-resume:last-child {
+    align-items: flex-end;
+}
+
+.attribution {
+    width: 98%;
+    font-size: 11px;
+    text-align: center;
+    background-color: var(--paleOrange);
+    border-radius: .75rem;
+    /* margin-top: 5rem; */
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 400px) {
+    body {
+        font-size: 18px;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    #balance {
+        margin-top: 2rem;
+    }
+
+    #charts {
+        margin-top: 2rem;
+    }
+
+    #charts-content {
+        justify-content: space-evenly;
+    }
+
+    .level {
+        width: 2.2rem;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .container {
+        width: 60%;
+    }
+
+    .attribution {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .container {
+        width: 50%;
+    }
+
+    .value-popup {
+        letter-spacing: 1px;
+        left: -30%;
+    }
+
+    .attribution {
+        font-size: 13px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    body {
+        font-size: 20px;
+    }
+
+    .container {
+        width: 40%;
+    }
+
+    .level-container span {
+        font-size: 1.1rem;
+    }
+
+    .level {
+        width: 2.5rem;
+    }
+
+    .value-popup {
+        font-size: 1rem;
+        top: -2.25rem;
+    }
+
+    .attribution {
+        font-size: 1rem;
+    }
+}
