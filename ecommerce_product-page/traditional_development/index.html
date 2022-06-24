@@ -13,7 +13,7 @@
 
 </head>
 
-<body>
+<body onresize="toggleImagesContainer();">
     <!-- CART CONTENT -->
     <header id="cart">
         <div id="cart-title">
@@ -103,8 +103,7 @@
         </div>
     </nav>
 
-    <section id="lightbox">
-    <!-- <section id="carroussel"> -->
+    <section id="carroussel-container" class="carroussel">
         <div id="images-container">
             <img src="../images/image-product-1.jpg" alt="">
             <img style="display: none;" src="../images/image-product-2.jpg" alt="">
