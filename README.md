@@ -6,3 +6,6 @@ Este diretório utilizarei para arquivar as soluções desenvolvidas por mim par
 
 Preview 👉🏻 [https://roneifeix.github.io/FrontEndMentor_Challenges/expenses_chart_component/traditional_development/index.html].
 
+## Ecommerce Product Page
+
+Preview 👉🏻 [https://roneifeix.github.io/FrontEndMentor_Challenges/ecommerce_product-page/traditional_development/index.html].
