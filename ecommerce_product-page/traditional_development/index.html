@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | E-commerce product page</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+    <!-- CART CONTENT -->
+    <header id="cart">
+        <div id="cart-title">
+            <h3>Cart</h3>
+            <div onclick="hiddenCart();"></div>
+        </div>
+        <hr>
+        <!-- EMPTY CART CONTENT -->
+        <div style="display: none;">
+            <span>Your cart is empty.</span>
+        </div>
+        <!-- CART CONTAINER -->
+        <div id="cart-container">
+            <!-- CART ITEM -->
+            <div class="cart-item">
+                <div class="cart-item-thumbnail">
+                    <img src="../images/image-product-1-thumbnail.jpg" alt="">
+                </div>
+                <div class="cart-item-resume">
+                    <span id="cart-item-title">Autumn Limited Edition...</span>
+                    <br />
+                    <span id="cart-item-unit-price">$125.00</span>
+                    <span id="cart-item-quantity">x 3</span>
+                    <span id="cart-item-total-price">$375.00</span>
+                </div>
+                <div class="cart-item-remove">
+                    <img src="../images/icon-delete.svg" alt="">
+                </div>
+            </div>
+            <hr> <!-- @ @ @ LINE BREAKER -->
+            <!-- CART ITEM -->
+            <div class="cart-item">
+                <div class="cart-item-thumbnail">
+                    <img src="../images/image-product-1-thumbnail.jpg" alt="">
+                </div>
+                <div class="cart-item-resume">
+                    <span id="cart-item-title">Autumn Limited Edition...</span>
+                    <br />
+                    <span id="cart-item-unit-price">$125.00</span>
+                    <span id="cart-item-quantity">x 3</span>
+                    <span id="cart-item-total-price">$375.00</span>
+                </div>
+                <div class="cart-item-remove">
+                    <img src="../images/icon-delete.svg" alt="">
+                </div>
+            </div>
+            <!-- END CART ITEMS -->
+            <div id="checkout">
+                <span>Checkout</span>
+            </div>
+        </div>
+    </header>
+    <!-- @ @ @ @ @ -->
+
+    <nav>
+        <div id="brand">
+            <div id="menu-icon" onclick="showNavBar();"></div>
+            <div id="logo"></div>
+        </div>
+        <div id="nav-menu">
+            <img onclick="hiddenNavBar();" src="../images/icon-close.svg" alt="">
+            <ul>
+                <li>
+                    <a href="#">Collections</a>
+                </li>
+                <li>
+                    <a href="#">Men</a>
+                </li>
+                <li>
+                    <a href="#">Women</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div id="user-nav">
+            <div id="cart-icon" onclick="showCart();" type="button">
+                <div id="cart-badge">
+                    <span>0</span>
+                </div>
+            </div>
+            <div id="avatar-image"></div>
+        </div>
+    </nav>
+
+    <section id="lightbox">
+    <!-- <section id="carroussel"> -->
+        <div id="images-container">
+            <img src="../images/image-product-1.jpg" alt="">
+            <img style="display: none;" src="../images/image-product-2.jpg" alt="">
+            <img style="display: none;" src="../images/image-product-3.jpg" alt="">
+        </div>
+        <div id="actions">
+            <i id="previus-icon"></i>
+            <i id="next-icon"></i>
+            <i id="lightbox-close-icon"></i>
+        </div>
+    </section>
+
+    <!-- ##$$## -->
+
+    <main>
+        <div id="gallery">
+            <div id="gallery-image">
+                <img src="../images/image-product-1.jpg" alt="">
+            </div>
+            <div id="gallery-thumbnail">
+                <img class="selected" src="../images/image-product-1-thumbnail.jpg" alt="">
+                <img src="../images/image-product-2-thumbnail.jpg" alt="">
+                <img src="../images/image-product-3-thumbnail.jpg" alt="">
+                <img src="../images/image-product-4-thumbnail.jpg" alt="">
+            </div>
+        </div>
+        <div id="description">
+            <h4>Sneaker Company</h4>
+            <h2>Fall Limited Edition Sneakers</h2>
+            <p>These low-profile sneakers are your perfect casual wear companion. Featuring a
+                durable rubber outer sole, they'll withstand everything the weather can offer.</p>
+            <div id="values">
+                <span id="price">$125.00</span>
+                <span id="discount">50%</span>
+                <span id="original-price">$250.00</span>
+            </div>
+            <div id="quantity">
+                <button>
+                    <img id="minus-img" src="../images/icon-minus.svg" alt="">
+                </button>
+                <span>0</span>
+                <button>
+                    <img id="plus-image" src="../images/icon-plus.svg" alt="">
+                </button>
+            </div>
+            <div id="add-cart">
+                <img src="../images/icon-cart.svg" alt="">
+                <span>Add to cart</span>
+            </div>
+        </div>
+    </main>
+
+    </div>
+    <div style="display: none;">
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+            Coded by <a href="#">Ronei Feix</a>.
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
